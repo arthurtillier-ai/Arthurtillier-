@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Swatch Nines — Event Film | Arthur Tillier, Camera Operator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Plausible Analytics -->
+  <script defer data-domain="arthurtillier.com" src="https://plausible.io/js/script.js"></script>
+  <meta name="description" content="Event film for Swatch Nines ski, snowboard and bike competition. Camera operator: Arthur Tillier — freelance DOP based in the Alps." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://arthurtillier.com/swatch-nines.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Swatch Nines — Event Film | Arthur Tillier, Camera Operator" />
+  <meta property="og:description" content="Event film for Swatch Nines ski, snowboard and bike competition. Camera operator: Arthur Tillier — freelance DOP based in the Alps." />
+  <meta property="og:url" content="https://arthurtillier.com/swatch-nines.html" />
+  <meta property="og:image" content="https://arthurtillier.com/images/swatch-nines/S9B.jpg" />
+  <meta property="og:site_name" content="Arthur Tillier" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Swatch Nines — Event Film | Arthur Tillier, Camera Operator" />
+  <meta name="twitter:description" content="Event film for Swatch Nines ski, snowboard and bike competition. Camera operator: Arthur Tillier — freelance DOP based in the Alps." />
+  <meta name="twitter:image" content="https://arthurtillier.com/images/swatch-nines/S9B.jpg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:creator" content="@arthurtillier" />
+  <meta name="author" content="Arthur Tillier" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Swatch Nines — Event Film",
+    "description": "Event film for the Swatch Nines ski, snowboard and bike competition. Camera operator: Arthur Tillier — freelance DOP based in the Alps, specialising in snow sports and mountain events.",
+    "thumbnailUrl": "https://arthurtillier.com/images/swatch-nines/S9B.jpg",
+    "url": "https://arthurtillier.com/swatch-nines.html",
+    "creator": {
+      "@type": "Person",
+      "name": "Arthur Tillier",
+      "url": "https://arthurtillier.com",
+      "jobTitle": "Camera Operator"
+    },
+    "productionCompany": { "@type": "Organization", "name": "Swatch" },
+    "genre": ["Event Film", "Outdoor Sport", "Skiing", "Snowboard"]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    :root {
+      --couleur-accent: #f46310;
+      --couleur-fond: #0e0e0e;
+      --couleur-section: #161616;
+      --couleur-texte: #e8e4dc;
+      --couleur-sous-texte: #888880;
+      --font-titre: 'arial', sans-serif;
+      --font-corps: 'arial', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--couleur-fond);
+      color: var(--couleur-texte);
+      font-family: var(--font-corps);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ============================================
+       NAVIGATION MINIMALE
+    ============================================ */
+    .nav-projet {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8rem 2.5rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+      transition: background 0.4s, padding 0.3s;
+      pointer-events: none;
+    }
+
+    .nav-projet.scrolled {
+      background: rgba(14,14,14,0.92);
+      backdrop-filter: blur(12px);
+      padding: 1.2rem 2.5rem;
+    }
+
+    .btn-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: color 0.3s, gap 0.3s;
+      pointer-events: all;
+    }
+
+    .btn-nav:hover { color: var(--couleur-accent); }
+
+    .btn-nav svg {
+      width: 18px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .btn-nav.retour:hover svg { transform: translateX(-3px); }
+    .btn-nav.portfolio:hover svg { transform: translateX(3px); }
+
+    /* ============================================
+       EN-TÊTE PROJET
+    ============================================ */
+    .projet-header {
+      padding: 7rem 4rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: flex-end;
+      gap: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding-bottom: 3rem;
+    }
+
+    .projet-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .projet-tag {
+      padding: 0.3rem 0.85rem;
+      border: 1px solid rgba(201,169,110,0.4);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--couleur-accent);
+    }
+
+    .projet-annee {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--couleur-sous-texte);
+      text-transform: uppercase;
+    }
+
+    .projet-titre {
+      font-family: var(--font-titre);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--couleur-texte);
+    }
+
+    .projet-titre em { font-style: italic; color: var(--couleur-accent); }
+
+    .projet-sous-titre {
+      font-size: 1rem;
+      color: var(--couleur-sous-texte);
+      line-height: 1.6;
+      max-width: 480px;
+      margin-top: 1.2rem;
+    }
+
+    /* ============================================
+       VIDÉO PRINCIPALE
+    ============================================ */
+    .video-section {
+      padding: 4rem 4rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--couleur-section);
+      border: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+
+    /* Pour une vidéo locale (.mp4) */
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Pour une vidéo embarquée (Vimeo / YouTube) */
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Placeholder si pas encore de vidéo */
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: rgba(255,255,255,0.15);
+    }
+
+    .video-placeholder svg { width: 48px; opacity: 0.3; }
+
+    .video-placeholder span {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================
+       CRÉDITS CENTRÉS
+    ============================================ */
+    .credits-section {
+      padding: 5rem 4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Colonne crédits */
+    .credits {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .credits-titre {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--couleur-accent);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+    }
+
+    .credit-ligne {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .credit-role {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--couleur-sous-texte);
+      flex-shrink: 0;
+    }
+
+    .credit-nom {
+      font-family: var(--font-titre);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--couleur-texte);
+      text-align: right;
+    }
+
+    /* ============================================
+       GALERIE PHOTOS
+    ============================================ */
+    .galerie-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 4rem 8rem;
+    }
+
+    .galerie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2.5rem;
+    }
+
+    .galerie-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--couleur-accent);
+    }
+
+    .galerie-count {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--couleur-sous-texte);
+    }
+
+    /* Grille masonry simulée */
+    .grille-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    /* Alternance de tailles pour varier le rythme */
+    .photo-item {
+      overflow: hidden;
+      background: var(--couleur-section);
+      border: 1px solid rgba(255,255,255,0.06);
+      cursor: pointer;
+      position: relative;
+    }
+
+    /* Photo standard */
+    .photo-item { aspect-ratio: 4/3; }
+
+    /* Photo portrait (plus haute) */
+    .photo-item.portrait { aspect-ratio: 3/4; }
+
+    /* Photo large (occupe 2 colonnes) */
+    .photo-item.large { grid-column: span 2; aspect-ratio: 16/9; }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.88);
+      transition: transform 0.55s ease, filter 0.55s ease;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+
+    /* Numéro sur chaque photo (optionnel) */
+    .photo-numero {
+      position: absolute;
+      bottom: 0.8rem;
+      right: 0.8rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* Placeholder si pas d'image */
+    .photo-vide {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.1);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      padding: 3rem 4rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo { font-family: var(--font-titre); font-size: 1.3rem; color: var(--couleur-texte); }
+    .footer-copy { font-size: 0.78rem; color: var(--couleur-sous-texte); }
+    .footer-liens { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+    .footer-liens a { color: var(--couleur-sous-texte); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
+    .footer-liens a:hover { color: var(--couleur-accent); }
+
+    /* ============================================
+       ANIMATIONS
+    ============================================ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 768px) {
+      .nav-projet { padding: 1.4rem 1.5rem; }
+      .nav-projet.scrolled { padding: 1rem 1.5rem; }
+
+      .projet-header {
+        grid-template-columns: 1fr;
+        padding: 6rem 1.5rem 2.5rem;
+        gap: 1.5rem;
+      }
+
+      .video-section { padding: 2rem 1.5rem 0; }
+      .credits-section { padding: 3rem 1.5rem; }
+      .galerie-section { padding: 3rem 1.5rem 5rem; }
+
+      .grille-photos { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+      .photo-item.large { grid-column: span 2; }
+      .photo-item.portrait { aspect-ratio: 4/3; }
+
+      footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+      .footer-liens { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .grille-photos { grid-template-columns: 1fr; }
+      .photo-item.large { grid-column: span 1; aspect-ratio: 4/3; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV INTELLIGENTE : s'adapte selon la page précédente -->
+  <nav class="nav-projet" id="navProjet">
+
+    <!-- Bouton retour — toujours présent -->
+    <a href="javascript:history.back()" class="btn-nav retour" id="btnRetour">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M19 12H5M12 5l-7 7 7-7"/>
+      </svg>
+      Previous
+    </a>
+    <!-- Bouton portfolio — masqué si on vient du portfolio -->
+    <a href="portfolio.html" class="btn-nav portfolio" id="btnPortfolio">
+      Portfolio
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+  </nav>
+
+  <!-- ============================================
+       EN-TÊTE
+  ============================================ -->
+  <header class="projet-header">
+    <div>
+      <div class="projet-meta">
+        <!-- 🔧 Modifiez la catégorie et l'année -->
+        <span class="projet-tag">Cam OP</span>
+        <span class="projet-tag">Evenemential</span>
+        <span class="projet-annee"></span>
+      </div>
+      <!-- 🔧 Modifiez le titre du projet -->
+      <h1 class="projet-titre">Swatch <em>Nines</em></h1>
+      <!-- 🔧 Courte accroche -->
+      <p class="projet-sous-titre">Swatch Nines — the invitational ski, snowboard and bike event. Filmed on location in the Alps.</p>
+    </div>
+  </header>
+
+  <!-- ============================================
+       VIDÉO — PROJET 7
+       🔧 Collez ici votre iframe Vimeo ou YouTube
+          Remplacez VOTRE_ID par l'identifiant de votre vidéo
+  ============================================ -->
+<section class="video-section reveal">
+    <div class="video-wrapper">
+
+      <!-- VIMEO — décommentez et remplacez VOTRE_ID_VIMEO -->
+      <!--
+      <iframe
+        src="https://player.vimeo.com/video/VOTRE_ID_VIMEO?badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="BOLLE"
+        allowfullscreen>
+      </iframe>
+      -->
+
+      <!-- YOUTUBE — décommentez et remplacez VOTRE_ID_YOUTUBE -->
+      <!--
+      <iframe
+        src="https://www.youtube.com/embed/VOTRE_ID_YOUTUBE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+      -->
+
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>Picture — Ajoutez votre vidéo ici</span>
+      </div>
+ <!-- Vidéo Vimeo — Picture -->
+    
+       <iframe 
+       width="560" height="315" 
+       src="https://www.youtube.com/embed/uOH0QNnj7fw?si=WT0bWodOtNeLec1A" 
+       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+      </iframe>
+
+    </div>
+  </section>
+    <section class="video-section reveal">
+    <div class="video-wrapper">
+
+      <!-- VIMEO — décommentez et remplacez VOTRE_ID_VIMEO -->
+      <!--
+      <iframe
+        src="https://player.vimeo.com/video/VOTRE_ID_VIMEO?badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="Titre de votre vidéo"
+        allowfullscreen>
+      </iframe>
+      -->
+
+      <!-- YOUTUBE — décommentez et remplacez VOTRE_ID_YOUTUBE -->
+      <!--
+      <iframe
+        src="https://www.youtube.com/embed/VOTRE_ID_YOUTUBE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+      -->
+
+      <!-- Placeholder affiché tant que la vidéo n'est pas intégrée -->
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>Projet 5 — Ajoutez votre vidéo ici</span>
+      </div>
+
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X5cfqpU7BAc?si=P2g1gKhZcvsJmJaE" 
+       title="YouTube video player" 
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+      </iframe>
+      
+    </div>
+  </section>
+<section class="video-section reveal">
+    <div class="video-wrapper">
+
+      <!-- VIMEO — décommentez et remplacez VOTRE_ID_VIMEO -->
+      <!--
+      <iframe
+        src="https://player.vimeo.com/video/VOTRE_ID_VIMEO?badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="BOLLE"
+        allowfullscreen>
+      </iframe>
+      -->
+
+      <!-- YOUTUBE — décommentez et remplacez VOTRE_ID_YOUTUBE -->
+      <!--
+      <iframe
+        src="https://www.youtube.com/embed/VOTRE_ID_YOUTUBE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+      -->
+
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>Picture — Ajoutez votre vidéo ici</span>
+      </div>
+ <!-- Vidéo Vimeo — Picture -->
+    
+     <iframe 
+     width="560" height="315" 
+     src="https://www.youtube.com/embed/zJTNs90IMdc?si=8efebW3ddOPZnEaO" 
+     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+     referrerpolicy="strict-origin-when-cross-origin" 
+     allowfullscreen>
+    </iframe>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CRÉDITS
+  ============================================ -->
+  <section class="credits-section">
+    <div class="credits reveal">
+      <p class="credits-titre">Crédits</p>
+
+      <!--
+        🔧 Modifiez chaque ligne : rôle à gauche, nom à droite
+           Supprimez ou ajoutez des .credit-ligne selon vos besoins
+      -->
+
+      <div class="credit-ligne">
+        <span class="credit-role">Client</span>
+        <span class="credit-nom">Nines</span>
+      </div>
+
+      <div class="credit-ligne">
+        <span class="credit-role">Agency</span>
+        <span class="credit-nom">Distillery</span>
+      </div>
+
+      <div class="credit-ligne">
+        <span class="credit-role">Video Team</span>
+        <span class="credit-nom">Hot Media Haus</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALERIE PHOTOS
+  ============================================ -->
+  
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Arthur Tillier</div>
+    <ul class="footer-liens">
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Confidentialité</a></li>
+      <li><a href="https://www.instagram.com/arthurtillier/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Arthur Tillier. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    // Bouton portfolio : masqué si on vient du portfolio
+    const btnPortfolio = document.getElementById('btnPortfolio');
+    if (document.referrer.includes('portfolio.html')) {
+      btnPortfolio.style.display = 'none';
+    }
+
+        // Nav devient opaque au scroll
+    const navProjet = document.getElementById('navProjet');
+    window.addEventListener('scroll', () => {
+      navProjet.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // Apparition au scroll
+    const obs = new IntersectionObserver(
+      entries => entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.06 }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+  <script src="js/global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    // GLightbox — wrap gallery images in lightbox anchors
+    document.querySelectorAll(".photo-item img").forEach(function(img) {
+      var a = document.createElement("a");
+      a.href = img.src;
+      a.className = "glightbox";
+      a.setAttribute("data-gallery", "project-gallery");
+      a.setAttribute("data-description", img.alt);
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+    });
+    var lightbox = GLightbox({
+      selector: ".glightbox",
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+      draggable: true
+    });
+    document.querySelectorAll(".photo-item").forEach(function(el) {
+      el.style.cursor = "zoom-in";
+    });
+  </script>
+</body>
+</html>

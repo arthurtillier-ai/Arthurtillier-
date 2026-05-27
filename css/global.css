@@ -1,0 +1,26 @@
+/* ============================================================
+   global.css — Custom cursor · Page transitions · Shared utils
+   Arthur Tillier — arthurtillier.com
+   ============================================================ */
+
+/* ── PAGE TRANSITION OVERLAY ──────────────────────────────── */
+.pt-overlay {
+  position: fixed;
+  inset: 0;
+  background: #080808;
+  z-index: 9990;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.pt-overlay.slide-in  { transform: translateY(0%); }
+.pt-overlay.slide-out { transform: translateY(-100%); transition-duration: 0.45s; }
+
+body.is-navigating { overflow: hidden; }
+
+/* ── LAZY IMAGE FADE-IN ────────────────────────────────────── */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+img[loading="lazy"].loaded { opacity: 1; }

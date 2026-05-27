@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /projet-4.html
+Disallow: /projet-5.html
+Disallow: /projet-6.html
+Disallow: /projet-7.html
+Disallow: /projet-8.html
+Disallow: /projet-corrige.html
+
+Sitemap: https://arthurtillier.com/sitemap.xml

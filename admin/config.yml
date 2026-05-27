@@ -1,0 +1,82 @@
+# ============================================================
+#  Netlify CMS — arthurtillier.com
+#  Access at: https://arthurtillier.com/admin/
+#  Auth via Netlify Identity (enable in Netlify dashboard)
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploads go
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# ── COLLECTIONS ─────────────────────────────────────────────
+
+collections:
+
+  # ── PROJECTS ──────────────────────────────────────────────
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title",        name: "title",       widget: "string" }
+      - { label: "Client",       name: "client",      widget: "string" }
+      - { label: "Role",         name: "role",        widget: "string",   hint: "e.g. Director, DOP, Cam Op" }
+      - { label: "Year",         name: "year",        widget: "number",   value_type: "int" }
+      - { label: "Cover image",  name: "cover",       widget: "image" }
+      - { label: "Vimeo URL",    name: "vimeo_url",   widget: "string",   required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["outdoor", "sport", "brand", "documentary", "commercial", "mountain"]
+      - { label: "Short description (portfolio grid)", name: "excerpt",  widget: "text",  required: false }
+      - { label: "Full description", name: "description", widget: "markdown", required: false }
+      - label: "Gallery photos"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string" }
+          - label: "Layout"
+            name: "layout"
+            widget: "select"
+            options: ["normal", "portrait", "large"]
+            default: "normal"
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ── SITE SETTINGS ─────────────────────────────────────────
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - label: "General"
+        name: "general"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Site title", name: "title", widget: "string" }
+          - { label: "Tagline",    name: "tagline", widget: "string" }
+          - { label: "Email",      name: "email",   widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Vimeo URL",     name: "vimeo",     widget: "string" }
+          - { label: "Hero video", name: "hero_video", widget: "file", required: false }
+          - { label: "Hero poster image", name: "hero_poster", widget: "image", required: false }
+
+      - label: "About"
+        name: "about"
+        file: "_data/about.yml"
+        fields:
+          - { label: "Portrait photo", name: "portrait", widget: "image" }
+          - { label: "Bio (paragraph 1)", name: "bio_1", widget: "text" }
+          - { label: "Bio (paragraph 2)", name: "bio_2", widget: "text", required: false }
+          - { label: "Years of experience", name: "years", widget: "number" }
+          - { label: "Number of clients",   name: "clients_count", widget: "number" }
+          - { label: "Countries worked in", name: "countries", widget: "number" }

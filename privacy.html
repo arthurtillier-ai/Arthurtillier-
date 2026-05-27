@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy — Arthur Tillier</title>
+  <meta name="description" content="Privacy policy for arthurtillier.com — how Arthur Tillier handles your data." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://arthurtillier.com/privacy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Plausible Analytics -->
+  <script defer data-domain="arthurtillier.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    :root {
+      --bg:      #080808;
+      --bg-alt:  #0d0d0d;
+      --text:    #D4CFC7;
+      --muted:   #5E5E5A;
+      --accent:  #F46310;
+      --line:    rgba(255,255,255,0.06);
+      --font-d:  'Poppins', sans-serif;
+      --font-ui: 'Poppins', sans-serif;
+      --ease:    cubic-bezier(0.4, 0, 0.2, 1);
+      --pad:     clamp(1.5rem, 5vw, 5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-ui);
+      font-weight: 300;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8rem var(--pad);
+      background: rgba(8,8,8,0.93);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo {
+      font-family: var(--font-d);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 2.8rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.48);
+      text-decoration: none;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      z-index: 201;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 1.5px;
+      background: #fff;
+      transition: transform 0.35s var(--ease), opacity 0.3s, width 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(8,8,8,0.98);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s var(--ease);
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+    .mobile-menu a {
+      font-family: var(--font-d);
+      font-size: clamp(2.2rem, 8vw, 3.5rem);
+      font-weight: 300;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: clamp(8rem, 14vw, 16rem) var(--pad) clamp(3rem, 5vw, 5rem);
+      border-bottom: 1px solid var(--line);
+    }
+    .label {
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+    }
+    .page-title {
+      font-family: var(--font-d);
+      font-size: clamp(2.8rem, 6vw, 6rem);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+    .page-title em { font-style: italic; color: var(--accent); }
+
+    /* ── CONTENT ── */
+    .legal-content {
+      max-width: 780px;
+      padding: clamp(4rem, 8vw, 8rem) var(--pad);
+    }
+    .legal-section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .legal-section:last-child { border-bottom: none; }
+    .legal-section h2 {
+      font-family: var(--font-d);
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .legal-section p,
+    .legal-section li {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--text);
+      opacity: 0.78;
+      margin-bottom: 0.6rem;
+    }
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.8rem;
+    }
+    .legal-section ul li::before {
+      content: '—';
+      color: var(--accent);
+      margin-right: 0.7rem;
+    }
+    .legal-section a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .legal-section a:hover { opacity: 0.75; }
+    .last-updated {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: rgba(244,99,16,0.06);
+      border: 1px solid rgba(244,99,16,0.2);
+      border-radius: 4px;
+      padding: 1.2rem 1.4rem;
+      margin-top: 1rem;
+    }
+    .highlight-box p {
+      font-size: 0.85rem !important;
+      opacity: 1 !important;
+      color: rgba(212,207,199,0.9) !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.5rem var(--pad);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    footer p {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    footer a {
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Arthur Tillier</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true">
+    <a href="portfolio.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <p class="label">GDPR</p>
+    <h1 class="page-title">Privacy <em>policy</em></h1>
+    <p class="last-updated">Last updated — May 2025</p>
+  </header>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-content">
+
+    <div class="legal-section">
+      <h2>Who is responsible for your data?</h2>
+      <p>
+        The data controller for this website is:
+      </p>
+      <ul>
+        <li>Arthur Tillier — Auto-entrepreneur</li>
+        <li>18 chemin du Crêt, 74320 Sevrier, France</li>
+        <li>SIRET : 900 108 986 00010</li>
+        <li>Email : <a href="mailto:contact@arthurtillier.com">contact@arthurtillier.com</a></li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>Analytics</h2>
+      <p>This website uses <strong style="color:#fff; font-weight:400;">Plausible Analytics</strong>, a privacy-friendly analytics tool. Plausible does not use cookies, does not collect any personally identifiable information, and does not track users across websites or devices.</p>
+      <div class="highlight-box">
+        <p>No cookies are set. No cookie banner is required. Analytics data is fully anonymised and compliant with GDPR without needing user consent.</p>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>Data transfers outside the EU</h2>
+      <p>
+        Plausible Analytics is a European company (Estonia) and all data is processed and stored within the EU. See <a href="https://plausible.io/data-policy" target="_blank" rel="noopener noreferrer">plausible.io/data-policy</a>.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Your rights</h2>
+      <p>Under the GDPR, you have the following rights regarding your personal data:</p>
+      <ul>
+        <li>Right of access — to obtain a copy of your data</li>
+        <li>Right to rectification — to correct inaccurate data</li>
+        <li>Right to erasure — to request deletion of your data</li>
+        <li>Right to restriction — to limit processing of your data</li>
+        <li>Right to object — to object to processing based on legitimate interest</li>
+        <li>Right to portability — to receive your data in a structured format</li>
+      </ul>
+      <p>
+        To exercise any of these rights, please contact: <a href="mailto:contact@arthurtillier.com">contact@arthurtillier.com</a>.
+      </p>
+      <p>
+        You also have the right to lodge a complaint with the French data protection authority (CNIL): <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">cnil.fr</a>.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Third-party services used</h2>
+      <ul>
+        <li><strong style="color:#fff; font-weight:400;">Netlify</strong> — hosting — <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+        <li><strong style="color:#fff; font-weight:400;">Plausible Analytics</strong> — anonymous statistics — <a href="https://plausible.io/privacy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+        <li><strong style="color:#fff; font-weight:400;">Google Fonts</strong> — typography — fonts are loaded via Google's CDN. Google may receive your IP address. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>.</li>
+        <li><strong style="color:#fff; font-weight:400;">Vimeo</strong> — video embeds on project pages may set cookies if you interact with the player. See <a href="https://vimeo.com/privacy" target="_blank" rel="noopener noreferrer">Vimeo's privacy policy</a>.</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>Changes to this policy</h2>
+      <p>
+        This privacy policy may be updated at any time. The date at the top of this page indicates when it was last revised. Continued use of the website after any changes constitutes acceptance of the updated policy.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Contact</h2>
+      <p>
+        For any question regarding this privacy policy or the handling of your data:<br/>
+        <a href="mailto:contact@arthurtillier.com">contact@arthurtillier.com</a>
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>&copy; 2025 Arthur Tillier. All rights reserved.</p>
+    <div style="display:flex; gap:2rem;">
+      <a href="legal-notice.html">Legal notice</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+</html>

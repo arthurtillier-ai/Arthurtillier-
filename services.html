@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services — Director, DOP & Camera Rental | Arthur Tillier</title>
+  <meta name="description" content="Freelance Director, Director of Photography and camera rental services. Available in France, Austria and internationally for outdoor, sport and brand content productions." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://arthurtillier.com/services.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services — Director, DOP & Camera Rental | Arthur Tillier" />
+  <meta property="og:description" content="Freelance Director, Director of Photography and camera rental services. Available in France, Austria and internationally for outdoor, sport and brand content productions." />
+  <meta property="og:url" content="https://arthurtillier.com/services.html" />
+  <meta property="og:image" content="https://arthurtillier.com/images/about/portrait.jpg" />
+  <meta property="og:site_name" content="Arthur Tillier" />
+  <meta property="og:locale" content="en_GB" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services — Director, DOP & Camera Rental | Arthur Tillier" />
+  <meta name="twitter:description" content="Freelance Director, Director of Photography and camera rental services. Available in France, Austria and internationally for outdoor, sport and brand content productions." />
+  <meta name="twitter:image" content="https://arthurtillier.com/images/about/portrait.jpg" />
+  <meta name="twitter:creator" content="@arthurtillier" />
+  <meta name="author" content="Arthur Tillier" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Arthur Tillier — Director, DOP & Camera Rental",
+    "description": "Freelance Director, Director of Photography and camera rental services for outdoor, sport and brand content productions.",
+    "url": "https://arthurtillier.com/services.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Arthur Tillier",
+      "url": "https://arthurtillier.com"
+    },
+    "areaServed": [
+      "France",
+      "Austria",
+      "Europe"
+    ],
+    "serviceType": [
+      "Film Direction",
+      "Director of Photography",
+      "Camera Rental"
+    ],
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "18 chemin du cret",
+        "addressLocality": "Sevrier",
+        "postalCode": "74320",
+        "addressCountry": "FR"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Innsbruck",
+        "addressCountry": "AT"
+      }
+    ]
+  }
+  </script>
+  <!-- Plausible Analytics -->
+  <script defer data-domain="arthurtillier.com" src="https://plausible.io/js/script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:      #080808;
+      --bg-alt:  #0d0d0d;
+      --text:    #D4CFC7;
+      --muted:   #5E5E5A;
+      --accent:  #F46310;
+      --line:    rgba(255,255,255,0.06);
+      --font-d:  'Poppins', sans-serif;
+      --font-ui: 'Poppins', sans-serif;
+      --ease:    cubic-bezier(0.4, 0, 0.2, 1);
+      --pad:     clamp(1.5rem, 5vw, 5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-ui);
+      font-weight: 300;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ────────────────────────────────── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8rem var(--pad);
+      background: rgba(8,8,8,0.93);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-logo {
+      font-family: var(--font-d);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      z-index: 201;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: #fff;
+      transition: transform 0.35s var(--ease), opacity 0.3s, width 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,8,8,0.98);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s var(--ease);
+    }
+
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+
+    .mobile-menu a {
+      font-family: var(--font-d);
+      font-size: clamp(2.2rem, 8vw, 3.5rem);
+      font-weight: 300;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    /* ── PAGE HEADER ────────────────────────── */
+    .page-header {
+      padding: clamp(7rem, 12vw, 14rem) var(--pad) clamp(3rem, 5vw, 6rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 8rem);
+      align-items: flex-end;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      font-family: var(--font-ui);
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+    }
+
+    .page-title {
+      font-family: var(--font-d);
+      font-size: clamp(3.5rem, 7vw, 8rem);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    .page-title em { font-style: italic; color: var(--accent); }
+
+    .page-intro {
+      font-size: clamp(0.88rem, 1vw, 1rem);
+      line-height: 1.95;
+      color: var(--muted);
+      padding-bottom: 0.5rem;
+    }
+
+    /* ── SERVICES ACCORDION ─────────────────── */
+    .services-section {
+      max-width: min(90vw, 1400px);
+      margin: 0 auto;
+      padding: clamp(1rem, 3vw, 3rem) var(--pad) clamp(5rem, 8vw, 10rem);
+    }
+
+    .service-item {
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .service-item:first-child { border-top: 1px solid var(--line); }
+
+    .service-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.6rem 0;
+      cursor: pointer;
+      text-align: left;
+      gap: 2rem;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .service-toggle:hover .service-title { color: var(--accent); }
+
+    .service-toggle-left {
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      flex: 1;
+    }
+
+    .service-num {
+      font-family: var(--font-d);
+      font-size: 1rem;
+      color: rgba(244,99,16,0.3);
+      font-weight: 300;
+      flex-shrink: 0;
+      width: 2rem;
+    }
+
+    .service-title {
+      font-family: var(--font-d);
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.05;
+      transition: color 0.3s;
+    }
+
+    .service-title em { font-style: italic; color: var(--accent); }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: border-color 0.3s, background 0.3s, transform 0.4s var(--ease);
+      position: relative;
+    }
+
+    .service-toggle:hover .service-icon { border-color: var(--accent); }
+
+    .service-icon::before,
+    .service-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--accent);
+      border-radius: 1px;
+      transition: transform 0.4s var(--ease), opacity 0.3s;
+    }
+
+    .service-icon::before { width: 14px; height: 1px; }
+    .service-icon::after  { width: 1px; height: 14px; }
+
+    .service-item.open .service-icon {
+      border-color: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    .service-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s var(--ease);
+    }
+
+    .service-item.open .service-body { max-height: 1000px; }
+
+    .service-body-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 6rem);
+      padding: 0 0 3.5rem clamp(3rem, 6vw, 6rem);
+    }
+
+    .service-desc {
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .service-desc p + p { margin-top: 1rem; }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .service-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 0.82rem;
+    }
+
+    /* ── RENTAL TEASER ──────────────────────── */
+    .service-toggle--link {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .rental-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-weight: 400;
+      white-space: nowrap;
+      transition: color 0.3s;
+    }
+
+    .service-toggle--link:hover .rental-cta { color: var(--accent); }
+
+    .rental-arrow {
+      font-size: 1rem;
+      letter-spacing: 0;
+      transition: transform 0.3s var(--ease);
+    }
+
+    .service-toggle--link:hover .rental-arrow { transform: translateX(5px); }
+
+    /* ── CTA ────────────────────────────────── */
+    .cta-section {
+      background: var(--bg-alt);
+      padding: clamp(5rem, 9vw, 12rem) var(--pad);
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: var(--font-d);
+      font-size: clamp(2.5rem, 5.5vw, 6rem);
+      font-weight: 300;
+      line-height: 1.0;
+      margin-bottom: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-title em { font-style: italic; color: var(--accent); }
+
+    .cta-sub {
+      font-size: 0.82rem;
+      line-height: 1.85;
+      color: var(--muted);
+      max-width: 380px;
+      margin: 0 auto 2.8rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #080808;
+      padding: 0.95rem 2.6rem;
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover { opacity: 0.86; transform: translateY(-2px); }
+
+    /* ── FOOTER ─────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2.2rem var(--pad);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--font-d);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-copy { font-size: 0.68rem; color: var(--muted); }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── GRAIN ──────────────────────────────── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.038;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+      animation: grain 0.4s steps(1) infinite;
+    }
+
+    @keyframes grain {
+      0%   { transform: translate(0,   0  ); }
+      12%  { transform: translate(-2%, 3% ); }
+      25%  { transform: translate(3%,  -1%); }
+      37%  { transform: translate(-1%, 4% ); }
+      50%  { transform: translate(4%,  -2%); }
+      62%  { transform: translate(-3%, 1% ); }
+      75%  { transform: translate(2%,  -3%); }
+      87%  { transform: translate(-4%, 2% ); }
+      100% { transform: translate(1%,  -1%); }
+    }
+
+    /* ── ANIMATIONS ─────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+      .page-header { grid-template-columns: 1fr; gap: 2rem; }
+      .service-toggle-left { gap: 1.2rem; }
+      .service-body-inner { grid-template-columns: 1fr; padding-left: 0; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Arthur Tillier</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html">Works</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="rental.html">Rental</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="portfolio.html">Works</a>
+    <a href="services.html">Services</a>
+    <a href="rental.html">Rental</a>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <header class="page-header">
+    <div>
+      <p class="label">Services</p>
+      <h1 class="page-title">What I<br><em>offer</em></h1>
+    </div>
+    <p class="page-intro">
+      As a director, director of photography, and camera operator, he is involved in every stage of your project. His expertise goes from the concept to the shoot to all the way through to post-production.
+    </p>
+  </header>
+
+  <section class="services-section">
+
+    <div class="service-item reveal">
+      <button class="service-toggle" aria-expanded="false">
+        <div class="service-toggle-left">
+          <span class="service-num">01</span>
+          <h2 class="service-title">Dire<em>ctor</em></h2>
+        </div>
+        <div class="service-icon" aria-hidden="true"></div>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <div class="service-desc">
+            <p>As a director, he transforms concepts into cinematic realities, bringing technical and artistic rigor to give each project a unique visual identity. </p>
+            <p>Believing that every decision must serve the storytelling, he gets involved right from pre-production to define the artistic direction.</p>
+          </div>
+          <ul class="service-list">
+            <li>Visual and artistic direction</li>
+            <li>Lighting plan and reference boards</li>
+            <li>Camera and lens selection</li>
+            <li>Directing the electrical and grip team</li>
+            <li>Colour grade supervision</li>
+            <li>Fiction, documentary, advertising, music video</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item reveal">
+      <button class="service-toggle" aria-expanded="false">
+        <div class="service-toggle-left">
+          <span class="service-num">02</span>
+          <h2 class="service-title"><em>Director of </em>Photography</h2>
+        </div>
+        <div class="service-icon" aria-hidden="true"></div>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <div class="service-desc">
+            <p>Available as a DOP or a camera operator on your sets. He works closely with the director to give a strong visual identity to every frame, bringing technical rigour and sensitivity to the shot.</p>
+            <p>Comfortable in varied conditions, he adapts to any shooting style to best serve the director's vision.</p>
+          </div>
+          <ul class="service-list">
+            <li>Solo or crew shooting</li>
+            <li>Commercial, documentary, events</li>
+            <li>Available in France and internationally</li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item reveal">
+      <a href="rental.html" class="service-toggle service-toggle--link">
+        <div class="service-toggle-left">
+          <span class="service-num">03</span>
+          <h2 class="service-title">Camera <em>rental</em></h2>
+        </div>
+        <span class="rental-cta">Pixboom Sparks — 4.6K · up to 2182 fps<span class="rental-arrow">→</span></span>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="cta-section reveal">
+    <p class="label">Contact</p>
+    <h2 class="cta-title">You have a project ?<br><em>Let's work together.</em></h2>
+    <p class="cta-sub">Reach out to discuss your next production.</p>
+    <a href="mailto:contact@arthurtillier.com" class="btn-primary">Get in touch</a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Arthur Tillier</div>
+    <ul class="footer-links">
+      <li><a href="legal-notice.html">Legal notice</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="https://www.instagram.com/arthurtillier/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Arthur Tillier</p>
+  </footer>
+
+  <script>
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMenu(force) {
+      const open = force !== undefined ? force : !hamburger.classList.contains('open');
+      hamburger.classList.toggle('open', open);
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => toggleMenu());
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
+
+    document.querySelectorAll('.service-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.closest('.service-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.service-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.service-toggle').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      entries => entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 100);
+          observer.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.06 }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <script src="js/global.js"></script>
+</body>
+</html>
