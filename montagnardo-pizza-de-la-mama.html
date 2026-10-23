@@ -726,10 +726,8 @@
     // Lightbox fullscreen gallery — data-href keeps image URL out of DOM links
     document.querySelectorAll(".photo-item img").forEach(function(img) {
       var a = document.createElement("a");
-      a.href = "javascript:void(0)";
+      a.href = img.src;
       a.className = "glightbox";
-      a.setAttribute("data-type", "image");
-      a.setAttribute("data-href", img.src);
       a.setAttribute("data-gallery", "project-gallery");
       a.setAttribute("data-description", img.alt);
       img.parentNode.insertBefore(a, img);
