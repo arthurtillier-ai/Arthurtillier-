@@ -49,7 +49,6 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="css/global.css" />
   <style>
     :root {
@@ -764,28 +763,5 @@
   </script>
 
   <script src="js/global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    // GLightbox — wrap gallery images in lightbox anchors
-    document.querySelectorAll(".photo-item img").forEach(function(img) {
-      var a = document.createElement("a");
-      a.href = img.src;
-      a.className = "glightbox";
-      a.setAttribute("data-gallery", "project-gallery");
-      a.setAttribute("data-description", img.alt);
-      img.parentNode.insertBefore(a, img);
-      a.appendChild(img);
-    });
-    var lightbox = GLightbox({
-      selector: ".glightbox",
-      touchNavigation: true,
-      loop: true,
-      zoomable: true,
-      draggable: true
-    });
-    document.querySelectorAll(".photo-item").forEach(function(el) {
-      el.style.cursor = "zoom-in";
-    });
-  </script>
 </body>
 </html>
