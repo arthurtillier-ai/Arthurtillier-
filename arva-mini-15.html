@@ -429,7 +429,41 @@
       .photo-item.large { grid-column: span 1; aspect-ratio: 4/3; }
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <style>
+    #gl-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.96);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999; opacity: 0; pointer-events: none;
+      transition: opacity .25s;
+    }
+    #gl-overlay.active { opacity: 1; pointer-events: all; }
+    #gl-overlay img {
+      max-width: 92vw; max-height: 88vh;
+      object-fit: contain; user-select: none;
+      transition: opacity .2s;
+    }
+    #gl-close {
+      position: absolute; top: 1.2rem; right: 1.8rem;
+      background: none; border: none; color: #fff;
+      font-size: 1.6rem; cursor: pointer; opacity: .7; line-height: 1;
+      transition: opacity .15s;
+    }
+    #gl-prev, #gl-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: #fff;
+      font-size: 3rem; cursor: pointer; opacity: .5; padding: 0 1.2rem;
+      transition: opacity .15s; line-height: 1;
+    }
+    #gl-prev { left: 0; }
+    #gl-next { right: 0; }
+    #gl-close:hover, #gl-prev:hover, #gl-next:hover { opacity: 1; }
+    #gl-counter {
+      position: absolute; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
+      color: #fff; opacity: .45; font-size: .78rem; letter-spacing: .12em;
+      font-family: inherit;
+    }
+  </style>
 </head>
 <body>
 
@@ -662,28 +696,65 @@
   </script>
 
   <script src="js/global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    // Lightbox fullscreen gallery — data-href keeps image URL out of DOM links
-    document.querySelectorAll(".photo-item img").forEach(function(img) {
-      var a = document.createElement("a");
-      a.href = img.src;
-      a.className = "glightbox";
-      a.setAttribute("data-gallery", "project-gallery");
-      a.setAttribute("data-description", img.alt);
-      img.parentNode.insertBefore(a, img);
-      a.appendChild(img);
-    });
-    GLightbox({
-      selector: ".glightbox",
-      touchNavigation: true,
-      loop: true,
-      zoomable: false,
-      draggable: true
-    });
-    document.querySelectorAll(".photo-item").forEach(function(el) {
-      el.style.cursor = "zoom-in";
-    });
+    (function () {
+      var imgs = Array.from(document.querySelectorAll('.photo-item img'));
+      var cur = 0, ov = null, tx = 0;
+
+      function build() {
+        ov = document.createElement('div');
+        ov.id = 'gl-overlay';
+        ov.innerHTML =
+          '<button id="gl-close">&#215;</button>' +
+          '<button id="gl-prev">&#8249;</button>' +
+          '<img id="gl-img" draggable="false" />' +
+          '<button id="gl-next">&#8250;</button>' +
+          '<span id="gl-counter"></span>';
+        document.body.appendChild(ov);
+        ov.querySelector('#gl-close').addEventListener('click', close);
+        ov.querySelector('#gl-prev').addEventListener('click', function () { nav(-1); });
+        ov.querySelector('#gl-next').addEventListener('click', function () { nav(1); });
+        ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
+        document.addEventListener('keydown', function (e) {
+          if (!ov.classList.contains('active')) return;
+          if (e.key === 'ArrowLeft') nav(-1);
+          if (e.key === 'ArrowRight') nav(1);
+          if (e.key === 'Escape') close();
+        });
+        ov.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+        ov.addEventListener('touchend', function (e) {
+          var dx = e.changedTouches[0].clientX - tx;
+          if (Math.abs(dx) > 50) nav(dx < 0 ? 1 : -1);
+        });
+      }
+
+      function show() {
+        ov.querySelector('#gl-img').src = imgs[cur].src;
+        ov.querySelector('#gl-img').alt = imgs[cur].alt;
+        ov.querySelector('#gl-counter').textContent = (cur + 1) + ' / ' + imgs.length;
+      }
+
+      function open(i) {
+        cur = i;
+        if (!ov) build();
+        show();
+        ov.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function nav(d) { cur = (cur + d + imgs.length) % imgs.length; show(); }
+
+      function close() {
+        ov.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      imgs.forEach(function (img, i) {
+        var item = img.closest('.photo-item');
+        item.style.cursor = 'zoom-in';
+        item.addEventListener('click', function () { open(i); });
+      });
+    })();
   </script>
 </body>
 </html>
