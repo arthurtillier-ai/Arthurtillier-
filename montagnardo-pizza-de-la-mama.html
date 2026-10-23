@@ -429,6 +429,7 @@
       .photo-item.large { grid-column: span 1; aspect-ratio: 4/3; }
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
 
@@ -720,5 +721,30 @@
   </script>
 
   <script src="js/global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    // Lightbox fullscreen gallery — data-href keeps image URL out of DOM links
+    document.querySelectorAll(".photo-item img").forEach(function(img) {
+      var a = document.createElement("a");
+      a.href = "javascript:void(0)";
+      a.className = "glightbox";
+      a.setAttribute("data-type", "image");
+      a.setAttribute("data-href", img.src);
+      a.setAttribute("data-gallery", "project-gallery");
+      a.setAttribute("data-description", img.alt);
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+    });
+    GLightbox({
+      selector: ".glightbox",
+      touchNavigation: true,
+      loop: true,
+      zoomable: false,
+      draggable: true
+    });
+    document.querySelectorAll(".photo-item").forEach(function(el) {
+      el.style.cursor = "zoom-in";
+    });
+  </script>
 </body>
 </html>
